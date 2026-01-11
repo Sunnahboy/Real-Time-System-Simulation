@@ -1,0 +1,10 @@
+/set_up_instructions
+/target
+data/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.env
