@@ -394,7 +394,6 @@ All metrics are collected under varying conditions:
 
 ## License
 
-[Specify license if applicable]
 
 ## References
 
