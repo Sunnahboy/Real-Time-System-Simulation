@@ -231,36 +231,6 @@ impl Processor {
         (avg, is_anomaly)
     }
 
-//     /// Update metrics and track deadline misses.
-//     /// SECTION 3: Deadline enforcement (200 µs per cycle)
-//     fn update_metrics(&self, elapsed_us: u64, consecutive_overruns: &mut u32, threshold: u32) {
-//     let mut m = match self.metrics.lock() {
-//         Ok(g) => g,
-//         Err(poisoned) => poisoned.into_inner(),
-//     };
-
-//     push_capped_u64(&mut m.latency_us, elapsed_us);
-//     m.total_cycles += 1;
-
-//     // ====================================================================
-//     // REQUIREMENT: Per-Component Deadline Tracking
-//     // Track PROCESSOR computation misses separately (CPU overload indicator)
-//     // ====================================================================
-//     if elapsed_us > self.deadline_us {
-//         //eprintln!("[Processor] OVERRUN: {:.0} µs > {:.0} µs", elapsed_us, self.deadline_us);
-//         *consecutive_overruns += 1;
-        
-//         if *consecutive_overruns >= threshold {
-//             // MISS CONFIRMED: Processor computation exceeded deadline
-//             //m.miss_processor += 1;  // Specific counter for processor misses
-//             m.record_deadline_miss(DeadlineComponent::Processor);
-//             self.sync.record_proc_miss();  // Also log to CSV
-//             *consecutive_overruns = 0;
-//         }
-//     } else {
-//         *consecutive_overruns = 0;
-//     }
-// }
 
 /// Tracks deadline misses: records every miss immediately + tracks consecutive for pattern detection.
 ///
