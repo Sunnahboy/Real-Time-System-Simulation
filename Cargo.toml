@@ -34,7 +34,6 @@ core_affinity = "0.8.3"
 
 
 
-
 [[bin]]
 name = "analyze"
 path = "src/analysis/cpu_load_data_analysis.rs"

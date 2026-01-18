@@ -134,7 +134,7 @@ fn prompt_menu() -> String {
     println!("├─────────────────────────────────────────────┤");
     println!("│  1) WITH CPU load (single run)         │");
     println!("│  2) NO CPU load (single run)           │");
-    println!("│  3) AUTO SWEEP [0,2,4,8,26]           │");
+    println!("│  3) AUTO SWEEP [0,2,4,8,20]           │");
     println!("│  4) Exit                               │");
     println!("└─────────────────────────────────────────────┘");
     print!("Select [1/2/3/4] (default: 2): ");
